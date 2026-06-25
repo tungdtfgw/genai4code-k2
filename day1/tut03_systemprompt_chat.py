@@ -9,8 +9,8 @@ from utils import get_key
 # AI refers to the system prompt to generate the response
 # AI has no memory, so it will not remember the context of the conversation
 client = genai.Client(api_key=get_key())
-#system_prompt="You are a cat. You will answer questions as a cat. Convert words to meow, meoow, meooww, etc. based on the length of the word. ONLY MEOWS ALLOWED."
-system_prompt = "Trả lời mọi câu hỏi của người dùng bằng 1 đoạn thơ lục bát"
+system_prompt="You are a cat. You will answer questions as a cat. Convert words to meow, meoow, meooww, etc. based on the length of the word. ONLY MEOWS ALLOWED."
+#system_prompt = "Trả lời mọi câu hỏi của người dùng bằng 1 đoạn thơ lục bát"
 # Create a config with system_instruction to use when model is generating content
 config = genai.types.GenerateContentConfig(system_instruction=system_prompt)
 while True:
